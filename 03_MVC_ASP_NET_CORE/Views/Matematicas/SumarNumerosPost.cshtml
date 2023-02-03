@@ -1,0 +1,26 @@
+﻿
+
+<h1>Sumar numeros Post</h1>
+
+<ul>
+    <li>
+        @Html.ActionLink("Sumar numeros Get", "SumarNumerosGet", "Matematicas", new{num1 = 11, num2 = 24})
+    </li>
+    <li>
+        @Html.ActionLink("Menu", "Menu", "Matematicas")
+    </li>
+</ul>
+
+
+<form method="post">
+
+    <label>Numero 1</label>
+    <input type="number" name="num1" class="form-control" />
+    <label>Numero 2</label>
+    <input type="number" name="num2" class="form-control" />
+
+    <button type="submit" class="btn btn-success">Sumar</button>
+</form>
+
+
+@ViewData["SUMA"]

@@ -1,0 +1,31 @@
+﻿@model Persona
+
+@Html.ActionLink("Texto Link", "Action", "Controller",
+new {variable1 = "variable1", variable2 = "variable2"})
+
+
+<h1>Informacion Controlador</h1>
+
+<ul>
+    <li>
+        <a asp-controller="Informacion" asp-action="Index">Index</a>
+    </li>
+    <li>
+        <a asp-controller="Informacion" asp-action="VistaControladorGet">Vista Controlador</a>
+    </li>
+    <li>
+        @Html.ActionLink("Vista --> Controller Get", "VistaControladorGet", "Informacion", new{app = "Mvc Net Core", version = 0})
+    </li>
+    
+</ul>
+
+
+<h1>Nombre: @ViewData["NOMBRE"]</h1>
+    <h1>Edad: @ViewData["EDAD"]</h1>
+
+@*<h1>Nombre: @ViewBag.Nombre</h1>*@
+
+    <h1>@Model.Nombre</h1>
+    <h1>@Model.Email</h1>
+    <h1>@Model.Edad</h1>
+

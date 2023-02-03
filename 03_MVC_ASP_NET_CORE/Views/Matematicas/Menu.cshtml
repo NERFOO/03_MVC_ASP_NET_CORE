@@ -1,0 +1,17 @@
+﻿
+
+<h1>Menu</h1>
+
+<ul>
+    <li>
+        @*@Html.ActionLink("Sumar numeros Post", "SumarNumerosPost", "Matematicas")*@
+        <a asp-controller="Matematicas" asp-action="SumarNumerosPost">Sumar numeros Post</a>
+    </li>
+    <li>
+        @Html.ActionLink("Sumar numeros Get", "SumarNumerosGet", "Matematicas", new{num1 = 11, num2 = 24})
+    </li>
+</ul>
+
+
+
+@ViewData["SUMA"]
