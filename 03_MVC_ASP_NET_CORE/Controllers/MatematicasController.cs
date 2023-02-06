@@ -24,5 +24,51 @@ namespace _03_MVC_ASP_NET_CORE.Controllers
             ViewData["SUMA"] = "La suma es " + (num1 + num2);
             return View();
         }
+
+        public IActionResult ConjeturaCollatz()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult ConjeturaCollatz(int numero)
+        {
+            List<int> numeros = new List<int>();
+            while (numero != 1)
+            {
+                if (numero % 2 == 0)
+                {
+                    numero = numero / 2;
+                }
+                else
+                {
+                    numero = numero * 3 + 1;
+                }
+                numeros.Add(numero);
+            }
+            return View(numeros);
+        }
+
+        public IActionResult TablaMultiplicar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult TablaMultiplicar(int number)
+        {
+            List<string> tabla = new List<string>();
+            int resultado;
+
+            for(int i = 1; i < 11; i++)
+            {
+                resultado = i * number;
+                tabla.Add(number + " * " + i + " = " + resultado);
+            }
+
+            return View(tabla);
+        }
+
+
     }
 }

@@ -1,0 +1,19 @@
+﻿@model List<string>
+
+<form method="post">
+    <label>Introduce un numero</label>
+    <input type="number" name="number" class="form-control" required/>
+
+    <button class="btn btn-success">Calcular la tabla</button>
+</form>
+
+
+@if (Model != null )
+{
+    <ul>
+        @foreach(string resultado in Model)
+        {
+            <li>@resultado</li>
+        }
+    </ul>
+}
